@@ -111,5 +111,6 @@ func DeleteEvent(id int) error {
 		return err
 	}
 	defer stmt.Close()
+	stmt.Exec(id)
 	return nil
 }
